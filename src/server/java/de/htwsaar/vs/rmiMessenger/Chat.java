@@ -18,7 +18,7 @@ public class Chat implements Serializable {
         this.userList = new ArrayList<>();
         this.messageList = new ArrayList<>();
     }
-    public Chat(int id, String name){
+    public Chat(int id){
         //todo: logic pls fuer Konstruktor der vorhandenen Chat abruft
     }
 
@@ -40,11 +40,11 @@ public class Chat implements Serializable {
         //todo: needs db logic
     }
 
-    public void addUserToChat(User user){
+    public void addUser(User user){
         userList.add(user);
     }
 
-    public void removeUserFromChat(User user){
+    public void removeUser(User user){
         userList.remove(user);
     }
 

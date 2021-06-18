@@ -4,6 +4,8 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
 public class ChatInterfaceImpl extends UnicastRemoteObject implements ChatInterface {
+
+
     private Chat chat;
     /**
      * Creates and exports a new UnicastRemoteObject object using an
@@ -21,14 +23,15 @@ public class ChatInterfaceImpl extends UnicastRemoteObject implements ChatInterf
     }
 
     @Override
-    public void AddMessage(Message message) throws RemoteException {
+    public void addMessage(Message message) throws RemoteException {
         chat.addMessage(message);
     }
 
     @Override
-    public void RemoveMessage(Message message) throws RemoteException {
+    public void removeMessage(Message message) throws RemoteException {
         chat.removeMessage(message);
     }
 
     public void setChat(Chat chat) { this.chat = chat; }
+    public Chat getChat() { return chat; }
 }

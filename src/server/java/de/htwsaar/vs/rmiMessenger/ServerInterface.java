@@ -4,13 +4,13 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface ServerInterface extends Remote {
-    public void connectClient(ClientInterface clientInterface, Client client) throws RemoteException;
+    public void connectUser(ClientInterface clientInterface, User user) throws RemoteException;
 
-    public void disconnectClient(ClientInterface clientInterface) throws RemoteException;
+    public void disconnectUser(ClientInterface clientInterface) throws RemoteException;
 
-    public Client getClient(ClientInterface clientInterface) throws RemoteException;
+    public User getUser(ClientInterface clientInterface) throws RemoteException;
 
-    public void AddChat(Chat chat) throws RemoteException;
+    public void addChat(Chat chat) throws RemoteException;
 
-    public Client LoadClientFromDB(Client client);
+    public User loadUserFromDB(User user) throws RemoteException;
 }

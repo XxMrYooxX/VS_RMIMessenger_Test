@@ -17,6 +17,10 @@ public class Message implements Serializable {
         this.id = registerMessage(this.sender, this.chat, this.payload);
     }
 
+    public Message(int id){
+        //todo: some logic :/ brauchen die message anhand der id zum createn des obj
+    }
+
     public int registerMessage(User sender, Chat chat, String payload){
         int id = 0; //todo: needs db logic
         return id;

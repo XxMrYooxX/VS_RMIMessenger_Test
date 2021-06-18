@@ -4,9 +4,9 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface ClientInterface extends Remote {
-    public void setClientOnline(ClientInterface clientInterface, Client client) throws RemoteException;
+    // public void setClientOnline(ClientInterface clientInterface, User User) throws RemoteException; //todo: friend feature? Online status feature?
 
-    public void setClientDisconnected(ClientInterface clientInterface) throws RemoteException;
+    // public void setClientDisconnected(ClientInterface clientInterface) throws RemoteException; //todo: friend feature? Online status feature?
 
     public void AddChat(Chat chat) throws RemoteException;
 
@@ -14,5 +14,5 @@ public interface ClientInterface extends Remote {
 
     public void RemoveChat(Chat chat) throws RemoteException;
 
-    public Client getClient() throws RemoteException;
+    public User getUser() throws RemoteException;
 }
